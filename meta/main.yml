@@ -4,6 +4,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: packages
   author: Akman
   description: Install packages on Linux
   license: "license (MIT)"
