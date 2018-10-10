@@ -3,6 +3,13 @@
 
 - name: Update apt cache if needed
   apt: update_cache=yes cache_valid_time=3600
+  become: yes
+  register: result
+  retries: 3
+  delay: 5
+  until: result is succeeded
 
 - name: Install packages if needed
   apt: name="{{ packages }}" state=present
+  become: yes
+  
